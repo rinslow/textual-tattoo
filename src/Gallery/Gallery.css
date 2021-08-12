@@ -1,0 +1,7 @@
+.Gallery {
+    background: #e0dfe2;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 16px;
+}
