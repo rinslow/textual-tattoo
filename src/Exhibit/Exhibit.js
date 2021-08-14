@@ -13,7 +13,7 @@ export default function Exhibit(font) {
         <div className={"Exhibit"}
              key={font}
         >
-            <span className={"Exhibit__text"} style={{fontFamily: font, fontSize: fontSize}}>{text}</span>
+            <span className={"Exhibit__text"} style={{fontFamily: font, fontSize: fontSize}}>{text || font}</span>
             <span className={"Exhibit__fontName"}>{font}</span>
         </div>
     );

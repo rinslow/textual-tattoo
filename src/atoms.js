@@ -26,7 +26,7 @@ const googleFonts = ['Roboto', 'Open Sans', 'Noto Sans JP', 'Lato', 'Montserrat'
 
 export const textState = atom({
     key: 'text',
-    default: 'tattoo',
+    default: '',
 });
 
 export const fontSizeState = atom({
