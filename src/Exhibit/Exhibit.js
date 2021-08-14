@@ -3,7 +3,6 @@ import {useRecoilValue} from "recoil";
 import {textState, fontSizeState, fontFilterState} from "../atoms";
 
 import "./Exhibit.scss"
-import {useState} from "react";
 
 export default function Exhibit(font) {
     let text = useRecoilValue(textState);
