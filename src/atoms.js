@@ -34,6 +34,12 @@ export const fontSizeState = atom({
     default: '32.5px',
 });
 
+export const fontFilterState = atom({
+    key: 'fontFilter',
+    default: '',
+});
+
+
 export const fontsState = atom({
     key: 'fonts',
     default: builtinFonts.concat(customFontsFromTheInternet) // todo google fonts

@@ -3,6 +3,17 @@
     height: 64px;
 }
 
+.Settings__form {
+    flex-direction: row;
+    display: flex;
+    padding: 8px;
+}
+
 .Settings__fontSizeSlider {
     width: 30%;
+    margin-top: 3px;
+    margin-left: 24px;
+}
+
+.Settings__fontFilter {
 }
