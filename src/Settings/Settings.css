@@ -1,4 +1,8 @@
 .Settings {
     background: #e8e7eb;
-    height: 10%;
+    height: 64px;
+}
+
+.Settings__fontSizeSlider {
+    width: 30%;
 }

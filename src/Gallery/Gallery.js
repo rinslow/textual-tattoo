@@ -7,7 +7,6 @@ export default function Gallery() {
     const fonts = useRecoilValue(fontsState);
     return (
         <div className={"Gallery"}>
-            Gallery
             {fonts.map((font) => Exhibit(font))}
         </div>
     )
