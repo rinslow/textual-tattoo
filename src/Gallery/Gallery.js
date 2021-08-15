@@ -5,6 +5,8 @@ import {fontsState} from "../atoms";
 
 export default function Gallery() {
     const fonts = useRecoilValue(fontsState);
+
+
     return (
         <div className={"Gallery"}>
             {fonts.map((font) => Exhibit(font))}

@@ -9,17 +9,3 @@
     padding: 8px;
 }
 
-.Settings__fontSizeSlider {
-    width: 30%;
-    margin-top: 3px;
-    margin-left: 24px;
-}
-
-.Settings__fontFilter {
-}
-
-.Settings__letterSpacingSlider {
-    width: 10%;
-    margin-top: 3px;
-    margin-left: 24px;
-}

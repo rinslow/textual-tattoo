@@ -44,6 +44,16 @@ export const fontFilterState = atom({
     default: '',
 });
 
+export const fgColorState = atom({
+    key: 'fgColor',
+    default: 'black',
+});
+
+export const bgColorState = atom({
+    key: 'bgColor',
+    default: 'white',
+});
+
 
 export const fontsState = atom({
     key: 'fonts',
