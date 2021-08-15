@@ -1,6 +1,6 @@
 import {useRecoilValue} from "recoil";
 
-import {textState, fontSizeState, fontFilterState, letterSpacingState, fgColorState} from "../atoms";
+import {textState, fontSizeState, fontFilterState, letterSpacingState, fgColorState, bgColorState} from "../atoms";
 
 import "./Exhibit.scss"
 
@@ -10,18 +10,25 @@ export default function Exhibit(font) {
     const fontFilter = useRecoilValue(fontFilterState);
     const letterSpacing = useRecoilValue(letterSpacingState);
     const fgColor = useRecoilValue(fgColorState);
+    const bgColor = useRecoilValue(bgColorState);
 
     const isDisplayed = font.toLowerCase().includes(fontFilter.toLowerCase());
 
     return (
-        <div className={"Exhibit"} style={{display: isDisplayed ? 'flex' : 'none'}}
+        <div className={"Exhibit"} style={
+            {
+                display: isDisplayed ? 'flex' : 'none',
+                backgroundColor: bgColor
+            }
+        }
              key={font}
         >
             <span className={"Exhibit__text"} style={
                 {
                     fontFamily: font,
                     fontSize: fontSize, letterSpacing,
-                    color: fgColor
+                    color: fgColor,
+                    backgroundColor: bgColor,
                 }
             }>
                 {text || font}

@@ -1,0 +1,10 @@
+.Settings__BgColorPicker {
+    margin-left: 48px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -2px;
+}
+
+.Settings__BgColorPicker__ColorPicker {
+    margin-left: -4px;
+}
