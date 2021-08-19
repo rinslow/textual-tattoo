@@ -9,7 +9,7 @@ export default function Gallery() {
 
     return (
         <div className={"Gallery"}>
-            {fonts.map((font) => Exhibit(font))}
+            {Object.entries(fonts).map(([font, data]) => Exhibit(font, data))}
         </div>
     )
 }
