@@ -9,8 +9,12 @@ export default function GalleryPage({pageIndex}) {
 
     const prepareNextPage = () => {
         // noinspection JSCheckFunctionSignatures
-        setPagesIndex(Math.max(indexInRecoil, pageIndex + 1));
+        const pageAfterThisOne = pageIndex + 1;
+        if (pageAfterThisOne > indexInRecoil) {
+            setPagesIndex(pageAfterThisOne);
+        }
     };
+
 
     return (
         <div className={"GalleryPage"}

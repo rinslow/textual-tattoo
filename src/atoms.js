@@ -82,5 +82,5 @@ export const isAutoScrollingState = atom({
 // the higher the value the slower the scroll, 1 is highest.
 export const scrollIntervalState = atom({
     key: 'scrollInterval',
-    default: 50,
+    default: 25,
 });
