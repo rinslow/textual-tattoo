@@ -84,3 +84,8 @@ export const scrollIntervalState = atom({
     key: 'scrollInterval',
     default: 25,
 });
+
+export const isAboutDialogDisplayedState = atom({
+    key: 'isAboutDialogDisplayed',
+    default: false
+});

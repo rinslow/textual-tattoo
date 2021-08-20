@@ -9,6 +9,7 @@ import Settings__ShuffleButton from "../Settings__ShuffleButton/Settings__Shuffl
 import Settings__SortAlphabeticallyButton
     from "../Settings__SortAlphabeticallyButton/Settings__SortAlphabeticallyButton";
 import Settings__AutoScroll from "../Settings__AutoScroll/Settings__AutoScroll";
+import Settings__AboutButton from "../Settings__AboutButton/Settings__AboutButton";
 
 
 export default function Settings() {
@@ -25,6 +26,7 @@ export default function Settings() {
                 <Settings__ShuffleButton/>
                 <Settings__SortAlphabeticallyButton/>
                 <Settings__AutoScroll/>
+                <Settings__AboutButton/>
             </form>
         </div>
     )

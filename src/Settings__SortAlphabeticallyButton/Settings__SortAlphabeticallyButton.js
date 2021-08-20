@@ -15,7 +15,6 @@ export default function Settings__SortAlphabeticallyButton() {
     return (
       <div className={"Settings__SortAlphabeticallyButton"}>
           <Tooltip title={"Sort Fonts A-Z"}>
-
               <IconButton color="primary" aria-label="sort fonts alphabetically" component="span" onClick={onClick}>
                   <SortByAlpha />
               </IconButton>
