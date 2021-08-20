@@ -5,6 +5,9 @@ import Settings__LetterSpacingSlider from "../Settings__LetterSpacingSlider/Sett
 import Settings__FgColorPicker from "../Settings__FgColorPicker/Settings__FgColorPicker";
 import Settings__BgColorPicker from "../Settings__BgColorPicker/Settings__BgColorPicker";
 import Settings__AmountOfFonts from "../Settings__AmountOfFonts/Settings__AmountOfFonts";
+import Settings__ShuffleButton from "../Settings__ShuffleButton/Settings__ShuffleButton";
+import Settings__SortAlphabeticallyButton
+    from "../Settings__SortAlphabeticallyButton/Settings__SortAlphabeticallyButton";
 
 
 export default function Settings() {
@@ -18,6 +21,8 @@ export default function Settings() {
                 <Settings__FgColorPicker/>
                 <Settings__BgColorPicker/>
                 <Settings__AmountOfFonts/>
+                <Settings__ShuffleButton/>
+                <Settings__SortAlphabeticallyButton/>
             </form>
         </div>
     )
