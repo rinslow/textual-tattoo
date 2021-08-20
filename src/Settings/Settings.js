@@ -8,6 +8,7 @@ import Settings__AmountOfFonts from "../Settings__AmountOfFonts/Settings__Amount
 import Settings__ShuffleButton from "../Settings__ShuffleButton/Settings__ShuffleButton";
 import Settings__SortAlphabeticallyButton
     from "../Settings__SortAlphabeticallyButton/Settings__SortAlphabeticallyButton";
+import Settings__AutoScroll from "../Settings__AutoScroll/Settings__AutoScroll";
 
 
 export default function Settings() {
@@ -23,6 +24,7 @@ export default function Settings() {
                 <Settings__AmountOfFonts/>
                 <Settings__ShuffleButton/>
                 <Settings__SortAlphabeticallyButton/>
+                <Settings__AutoScroll/>
             </form>
         </div>
     )

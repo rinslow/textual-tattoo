@@ -1,5 +1,4 @@
 import "./Gallery.css";
-import Exhibit from "../Exhibit/Exhibit";
 import {useRecoilValue} from "recoil";
 import {pagesIndexState} from "../atoms";
 import GalleryPage from "../GalleryPage/GalleryPage";

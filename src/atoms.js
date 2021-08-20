@@ -73,3 +73,14 @@ export const pagesIndexState = atom({
     key: 'pagesIndex',
     default: 2
 });
+
+export const isAutoScrollingState = atom({
+    key: 'isAutoScrolling',
+    default: false
+});
+
+// the higher the value the slower the scroll, 1 is highest.
+export const scrollIntervalState = atom({
+    key: 'scrollInterval',
+    default: 50,
+});
