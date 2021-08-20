@@ -1,0 +1,6 @@
+.GalleryPage {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    max-width: 100%;
+}

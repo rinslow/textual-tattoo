@@ -1,12 +1,19 @@
 import {TextField} from "@material-ui/core";
-import {useRecoilState} from "recoil";
-import {fontFilterState} from "../atoms";
+import {useRecoilState, useResetRecoilState} from "recoil";
+import {fontFilterState, pagesIndexState} from "../atoms";
 
 export default function Settings__FontFilter() {
     const [fontFilter, setFontFilter] = useRecoilState(fontFilterState);
+    const resetPages = useResetRecoilState(pagesIndexState);
 
     function handleFontFilterChange(event) {
-        setFontFilter(event.target.value);
+        const newFilter = event.target.value;
+
+        if (!fontFilter.startsWith(newFilter)) {
+            resetPages();
+        }
+
+        setFontFilter(newFilter);
     }
 
     return (

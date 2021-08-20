@@ -1,6 +1,6 @@
-import {atom, selector} from "recoil";
+import {atom, selector, selectorFamily} from "recoil";
 
-import {fontsToData} from "./consts";
+import {fontsData} from "./consts";
 
 
 export const textState = atom({
@@ -43,5 +43,33 @@ export const bgColorState = atom({
 
 export const fontsState = atom({
     key: 'fonts',
-    default: fontsToData
+    default: fontsData
+});
+
+export const fontsByPageState = selectorFamily({
+    key: 'fontsByPage',
+    get: (page) => ({get}) => {
+        if (page === 0) {
+            throw 'page 0 not supported!';
+        }
+
+        const fonts = get(fontsState);
+        const currentFilter = get(fontFilterState);
+        const itemsPerPage = get(itemsPerPageState);
+
+        const filteredFonts = fonts.filter(f => f[0].toLowerCase().includes(currentFilter.toLowerCase()));
+        // noinspection UnnecessaryLocalVariableJS
+        const paginatedFonts = filteredFonts.slice(itemsPerPage * (page - 1), itemsPerPage * page);
+        return paginatedFonts;
+    }
+});
+
+export const itemsPerPageState = atom({
+    key: 'itemsPerPage',
+    default: 24,
+});
+
+export const pagesIndexState = atom({
+    key: 'pagesIndex',
+    default: 2
 });
