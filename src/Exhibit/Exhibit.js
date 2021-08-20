@@ -42,8 +42,8 @@ export default function Exhibit(font, fontData) {
                 fontData && (isVisible || hasFontBeenRendered[font]) &&
                 <style>{
                     `@font-face { 
-                        font-family: \'${font}\'; 
-                        src: url(\'${fontData.url}\') format(\'${fontData.format}\'); 
+                        font-family: '${font}'; 
+                        src: url('${fontData.url}') format('${fontData.format}'); 
                     }`}
                 </style>
             }
