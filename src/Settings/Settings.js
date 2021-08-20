@@ -4,6 +4,7 @@ import Settings__FontSizeSlider from "../Settings__FontSizeSlider/Settings__Font
 import Settings__LetterSpacingSlider from "../Settings__LetterSpacingSlider/Settings__LetterSpacingSlider";
 import Settings__FgColorPicker from "../Settings__FgColorPicker/Settings__FgColorPicker";
 import Settings__BgColorPicker from "../Settings__BgColorPicker/Settings__BgColorPicker";
+import Settings__AmountOfFonts from "../Settings__AmountOfFonts/Settings__AmountOfFonts";
 
 
 export default function Settings() {
@@ -16,6 +17,7 @@ export default function Settings() {
                 <Settings__LetterSpacingSlider/>
                 <Settings__FgColorPicker/>
                 <Settings__BgColorPicker/>
+                <Settings__AmountOfFonts/>
             </form>
         </div>
     )
