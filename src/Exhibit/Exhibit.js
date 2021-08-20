@@ -1,12 +1,12 @@
 import {useRecoilValue} from "recoil";
 
-import {textState, fontSizeState, fontFilterState, letterSpacingState, fgColorState, bgColorState} from "../atoms";
+import {textState, fontSizeInPixelState, fontFilterState, letterSpacingState, fgColorState, bgColorState} from "../atoms";
 
 import "./Exhibit.scss"
 
 export default function Exhibit(font, fontData) {
     let text = useRecoilValue(textState);
-    const fontSize = useRecoilValue(fontSizeState);
+    const fontSizeInPx = useRecoilValue(fontSizeInPixelState);
     const fontFilter = useRecoilValue(fontFilterState);
     const letterSpacing = useRecoilValue(letterSpacingState);
     const fgColor = useRecoilValue(fgColorState);
@@ -28,8 +28,8 @@ export default function Exhibit(font, fontData) {
                 fontData &&
                 <style>{
                     `@font-face { 
-                        font-family: \'${font}\'; 
-                        src: url(\'${fontData.url}\') format(\'${fontData.format}\'); 
+                        font-family: '${font}'; 
+                        src: url('${fontData.url}') format('${fontData.format}'); 
                     }`}
                 </style>
             }
@@ -37,7 +37,8 @@ export default function Exhibit(font, fontData) {
             <span className={"Exhibit__text"} style={
                 {
                     fontFamily: font,
-                    fontSize: fontSize, letterSpacing,
+                    fontSize: fontSizeInPx,
+                    letterSpacing,
                     color: fgColor,
                     backgroundColor: bgColor,
                 }

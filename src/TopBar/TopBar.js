@@ -3,7 +3,6 @@ import TextField from '@material-ui/core/TextField';
 import './TopBar.css';
 import {
     useRecoilState,
-    useRecoilValue,
 } from 'recoil';
 
 import {textState} from "../atoms";
