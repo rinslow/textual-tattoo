@@ -1,6 +1,6 @@
-import {atom} from "recoil";
+import {atom, selector} from "recoil";
 
-import {fontsToData, customFontsFromTheInternet} from "./consts";
+import {fontsToData} from "./consts";
 
 
 export const textState = atom({
@@ -10,8 +10,16 @@ export const textState = atom({
 
 export const fontSizeState = atom({
     key: 'fontSize',
-    default: '32.5px',
+    default: 32,
 });
+
+export const fontSizeInPixelState = selector({
+   key: 'fontSizeInPx',
+    get: ({get}) => {
+        const fontSize = get(fontSizeState);
+        return fontSize + 'px';
+    }
+})
 
 export const letterSpacingState = atom({
     key: 'letterSpacing',

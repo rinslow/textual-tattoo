@@ -7,7 +7,7 @@ export default function Settings__FontSizeSlider() {
     const [fontSize, setFontSize] = useRecoilState(fontSizeState);
 
     function handleFontSizeChange(event, newValue) {
-        setFontSize(newValue + 'px');
+        setFontSize(newValue);
     }
 
     return (
@@ -16,7 +16,7 @@ export default function Settings__FontSizeSlider() {
                 Font size
             </Typography>
             <Slider
-                defaultValue={parseInt(fontSize.substring(0, fontSize.length - 2))}
+                defaultValue={fontSize}
                 getAriaValueText={(number) => `${number} pixels`}
                 onChange={handleFontSizeChange}
                 aria-labelledby="discrete-slider-small-steps"
