@@ -6,6 +6,7 @@ import {
 } from 'recoil';
 
 import {textState} from "../atoms";
+import Settings from "../Settings/Settings";
 
 export default function TopBar() {
     const [text, setText] = useRecoilState(textState);
@@ -28,11 +29,14 @@ export default function TopBar() {
                         multiline
                         fullWidth={true}
                         maxRows={3}
+                        autoFocus={true}
                         value={text}
                         onChange={handleChange}
                     />
                 </form>
             </div>
+
+            <Settings/>
 
         </div>
     );

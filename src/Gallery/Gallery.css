@@ -4,4 +4,6 @@
     display: flex;
     flex-flow: row wrap;
     padding: 16px;
+    min-height: 800px;
+    overflow-y: scroll;
 }
